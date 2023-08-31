@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Typer</title>
+</head>
+<body>
+<h1 id="type"></h1>	
+<script type="text/javascript">
+	
+	// Auto Typer
+	let typingElem = document.querySelector('#type');
+	let timeoutSpeed = 50;
+	let words = ['Web Application Developer', 'Logical Programming Practitioner', 'Tech Enthusiast', 'Curious Learner'];
+	let totalWords = words.length;
+
+	const typer = async (wordIndex, word, action) =>
+	{
+		wordIndex = wordIndex >= words.length ? 0 : wordIndex;
+		word = word ?? words[wordIndex];
+		word = word.split("") ?? [];	
+
+		if (action == 'type') 
+		{
+			if (word.length) 
+			{   
+				let char = word[0] == '|' ? '<br/>' : word.shift();
+				typingElem.innerHTML += char;
+				word = word.join("");
+				await setTimeout(() => {typer(wordIndex, word, 'type')}, 100);
+			}
+			else	
+			{
+				word = words[wordIndex];
+				await setTimeout(() => {typer(wordIndex, word, 'erase')}, 100);
+			}
+		}
+		else if (action == 'erase')
+		{
+			if (word.length) 
+			{
+				word.pop();
+				word = word.join("");
+				typingElem.innerHTML = word;
+				await setTimeout(() => {typer(wordIndex, word, 'erase')}, 10);			
+			}
+			else
+			{
+				wordIndex++;
+				word = words[wordIndex];
+				await setTimeout(() => {typer(wordIndex, word, 'type')}, 10);
+			}
+
+		}
+		else console.error('Unknown action passed to typer');
+	} 
+
+	typer(0, words[0], 'type');
+
+
+</script>
+</body>
+</html>
