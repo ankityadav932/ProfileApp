@@ -180,7 +180,7 @@ conatactForm.addEventListener('submit', evt => {
 	submitLoader.classList.remove('d-none');
 	submitBtn.classList.add('d-none');
 
-	fetch('http://localhost:5000/send-mail', {
+	fetch('https://ankityadav-profile-server.onrender.com/send-mail', {
 		method : 'POST',
 		headers : {
 			 "Content-type" : "application/json"
@@ -210,6 +210,6 @@ conatactForm.addEventListener('submit', evt => {
 
 
 // Preloader remover 
-// setTimeout(() => {
-	// document.querySelector('#preloader').classList.add('d-none');
-// }, 3000);
+setTimeout(() => {
+	document.querySelector('#preloader').classList.add('d-none');
+}, 3000);
