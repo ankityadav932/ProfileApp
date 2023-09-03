@@ -97,10 +97,10 @@ header {
 
 header > div#bar {
     background: var(--secondary);
-    border-radius: 9999px;
-    width: 90%;
+    border-radius: 10px;
+    width: 98%;
     padding: .75rem 4rem;
-    margin: 2rem auto;
+    margin: 1rem auto;
 }
 
 div#bar > div > h1 {
@@ -155,7 +155,7 @@ div#wrapper > section.new {
 }
 
 p.typer-para {
-    margin-left: 7rem;
+    margin-left: 5rem;
     min-height: 200px;
 }
 
