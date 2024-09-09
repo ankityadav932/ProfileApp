@@ -6,7 +6,7 @@
 :root {
 	--primary : #00fff8;
 	--secondary : #333333;
-    --light : #d7f2fb;
+    --light : #ffffff;
 }
 
 
@@ -101,7 +101,7 @@ header > div#bar {
     width: 98%;
     padding: .75rem 4rem;
     margin: 1rem auto;
-    border: 2px solid var(--primary);
+    border: 3px solid var(--primary);
 }
 
 div#bar > div > h1 {
