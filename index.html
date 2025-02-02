@@ -13,7 +13,7 @@
 	
 	<!-- Preloader -->
 
-	<div id="preloader">
+	<div id="preloader" class="d-none">
 		<img src="images\Infinity.svg" alt="Loading ...">
 		<br>
 		<!-- <h3 class="text-white">Loading ...</h3> -->
@@ -21,7 +21,7 @@
 
 
 	<!-- Nav Bar -->
-	<header>
+	<header id="desk" class="d-none">
 		<div id="bar" class="row">
 			<div class="col-md-6 logo">
 				<h1 class="display-1">ANKIT YADAV</h1>
@@ -32,6 +32,69 @@
 				<span type="button" target="#portfolio" class="tab-btn">Portfolio</span>
 				<span type="button" target="#contact" class="tab-btn">Contact</span>
 			</div>
+		</div>
+	</header>
+
+	<style>
+		header#phone {
+		}
+
+		header#phone > div#barp {
+			position: relative;
+		    border: 3px solid var(--primary);
+		    background-color: var(--secondary);
+		    color: var(--primary);
+		    width: 100%;
+		    margin: 10px auto;
+		    padding: 5px;
+		    border-radius: 5px;
+		}
+
+		header#phone > div#barp > div#menu-btn > svg {
+			border: 1px solid #fff;
+			border-radius: 10px;
+		}
+		
+		header#phone > div#bmenu {
+		    position: absolute;
+		    background-color: var(--secondary);
+		    color: #fff;
+		    padding: 10px 14px;
+		    width: 28%;
+		    margin: 0 auto;
+		    right: 20px;
+		    /* text-align: right; */
+		    border: 3px solid var(--primary);
+		    border-radius: 5px;
+		}
+
+		header#phone > div#bmenu > p {
+			margin-bottom: 5px;
+		}
+
+		header#phone > div#bmenu > p.active {
+			color: var(--primary);
+		}
+
+
+
+	</style>
+	<header id="phone" class="container">
+		<div id="barp" class="row">
+			<div class="col-10 logo">
+				<h1 class="display-3">ANKIT YADAV</h1>
+			</div>
+			<div id="menu-btn" class="col-2 d-flex justify-content-center align-items-center">
+				<svg xmlns="http://www.w3.org/2000/svg" width="80%" height="80%" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+				  <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+				</svg>
+			</div>
+		</div>
+		<div id="bmenu" class="d-none">
+			<p type="button" target="#intro" class="tab-btn active">Intro</p>
+			<p type="button" target="#skills" class="tab-btn">Skills</p>
+			<p type="button" target="#portfolio" class="tab-btn">Portfolio</p>
+			<p type="button" target="#contact" class="tab-btn">Contact</p>
 		</div>
 	</header>
 	
@@ -47,7 +110,7 @@
 						<img src="images/me.jpg" alt="ankit yadav" class="img-fluid card border-2 shadow" style="border-color: #222222;">
 					</div>
 					<div class="col-md-10 master-bg" style="background-image: url(images/bg-1.png); background-position: 10% 0 !important;">
-						<p class="fs-4 ms-md-5 ms-1">Hello, I am <span class="text-first fs-3 fw-semibold">Ankit Yadav</span>. I am a ...</p>
+						<p class="fs-4 ms-md-5 ms-1">Hello, I am <span class="text-first fs-3 fw-semibold">Ankit Yadav</span>. A ...</p>
 						<p class="fs-4 typer-para">
 							<span id="typeme" class="d-inline-block text-first display-1 pe-md-2 pe-0"></span>
 							<!-- <span id="typeme" class="d-inline-block text-first display-1 pe-2">Web Application <br/> Developer</span> -->
@@ -57,7 +120,7 @@
 			</div>
 			<div class="container px-4 px-md-0">
 				<div class="row justify-content-center">
-					<div class="col-md-12 text-center p-4 bg-second rounded">
+					<div class="col-md-12 p-4 bg-second rounded">
 						<h3 class="text-fav">Intro</h3>
 						<hr class="border-2 border-white bg-white">
 						<p class="text-white text-start">Hello, This is Ankit Yadav, and I am a professional software developer. I have 4 years of quality rich dynamic experience when it comes to the development of web applications because I have developed them from simple static websites to dynamic websites in categories like blogging and e-commerce to real-time communication applications. I am also good with API development and integration. Among these developments, I also came across situations where I had to develop a custom module as per the client's unique requirements. I have worked in both product- and service-based companies, so I know both how to code and fit a new module into a large codebase of a product and how to design a project from scratch. Apart from that, I am a quick learner and quite good at researching new stuff on the internet. I strongly believe that the ability to research and adaptability to new environments are the most important skills for any professional.</p>
@@ -311,7 +374,7 @@
 					<div class="col-md-5 d-flex align-items-center justify-content-center master-bg" style="background-image: url(images/bg-1.png);">
 						<h3 class="display-4">Wanna <br/><span class="fw-semibold text-first">Connect</span> ...</h3>
 					</div>
-					<div class="col-md-5 p-4 p-md-5 bg-second rounded">
+					<div class="col-md-5 col-11 p-4 p-md-5 bg-second rounded">
 						<form id="contactform">
 							<h3 class="text-fav">Let's Connect</h3>
 							<hr class="border-white bg-white my-1">

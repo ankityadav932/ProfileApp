@@ -3,8 +3,8 @@
 
 
 // Navigation slider 
-let links = document.querySelectorAll('div#bar > div#menu > span.tab-btn');
-let activeLink = document.querySelector('div#bar > div#menu > span.tab-btn.active');
+let links = document.querySelectorAll('div#bar > div#menu > span.tab-btn, div#barp + div#bmenu > p.tab-btn');
+let activeLink = document.querySelector('div#bar > div#menu > span.tab-btn.active, div#barp + div#bmenu > p.tab-btn.active');
 let pages = document.querySelectorAll('div#wrapper > section');
 let activePage = document.querySelector('div#wrapper > section.active')
 let activePageIndex = activePage.getAttribute('index');
@@ -213,3 +213,16 @@ conatactForm.addEventListener('submit', evt => {
 setTimeout(() => {
 	document.querySelector('#preloader').classList.add('d-none');
 }, 3000);
+
+
+// Phone Menu
+let menuBtn = document.querySelector('header#phone > div#barp > div#menu-btn');
+let phoneMenu = document.querySelector('header#phone > div#bmenu');
+
+
+document.addEventListener('click', evt => {
+	if (evt.target == menuBtn || menuBtn.contains(evt.target))
+		phoneMenu.classList.toggle('d-none');
+	else if (evt.target != phoneMenu && ! phoneMenu.contains(evt.target))
+		phoneMenu.classList.add('d-none');
+});

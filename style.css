@@ -86,7 +86,7 @@ div#wrapper {
     background-color: var(--secondary);
 }
 
-header {
+header#desk, header#phone {
     position: fixed;
     width: 100%;
     height: auto;
@@ -95,7 +95,7 @@ header {
     z-index: 10;
 }
 
-header > div#bar {
+header#desk > div#bar {
     background: var(--secondary);
     border-radius: 10px;
     width: 98%;
@@ -332,7 +332,7 @@ form#contactform button[type="submit"]:hover {
         margin-bottom: 10px;
     }
 
-    header > div#bar {
+    header#desk > div#bar {
         width: 95%;
         margin: 10px auto;
         padding: .75rem 1rem;
