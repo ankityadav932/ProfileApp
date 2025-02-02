@@ -86,6 +86,8 @@ div#wrapper {
     background-color: var(--secondary);
 }
 
+
+/* Desk Header */
 header#desk, header#phone {
     position: fixed;
     width: 100%;
@@ -131,6 +133,49 @@ div#bar > div#menu > span.tab-btn:hover {
     margin: 0 10px;
     color: var(--primary);
 }
+
+/* Mobile header */
+header#phone {
+    display: none;
+}
+
+header#phone > div#barp {
+    position: relative;
+    border: 3px solid var(--primary);
+    background-color: var(--secondary);
+    color: var(--primary);
+    width: 100%;
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+header#phone > div#barp > div#menu-btn > svg {
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+header#phone > div#bmenu {
+    position: absolute;
+    background-color: var(--secondary);
+    color: #fff;
+    padding: 10px 14px;
+    width: 28%;
+    margin: 0 auto;
+    right: 20px;
+    /* text-align: right; */
+    border: 3px solid var(--primary);
+    border-radius: 5px;
+}
+
+header#phone > div#bmenu > p {
+    margin-bottom: 5px;
+}
+
+header#phone > div#bmenu > p.active {
+    color: var(--primary);
+}
+
 
 div#wrapper > section {
     position: absolute;
@@ -332,11 +377,12 @@ form#contactform button[type="submit"]:hover {
         margin-bottom: 10px;
     }
 
-    header#desk > div#bar {
-        width: 95%;
-        margin: 10px auto;
-        padding: .75rem 1rem;
-        border-radius: 5px;
+    header#desk {
+        display: none;
+    }
+
+    header#phone {
+        display: block;
     }
 
     div#intro div.typeme {
@@ -351,5 +397,18 @@ form#contactform button[type="submit"]:hover {
     .scene {
         margin: 40px auto;
     }
+
+/*    div#bar > div#menu > span.tab-btn {pointer-events: none}*/
+
+/*    .cube__face {pointer-events: none}*/
+
+    div.skill-card {pointer-events: none}
+
+/*    section#portfolio a.btn-project {pointer-events: none}*/
+
+    div.projectbox div.projectlist > div h4::after{pointer-events: none}
+
+/*    form#contactform button[type="submit"] {pointer-events: none}*/
+
 
 }
